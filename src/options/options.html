@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TranslateGemma Settings</title>
+  <meta name="build-commit" content="__BUILD_COMMIT__">
+  <meta name="build-time" content="__BUILD_TIME__">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h1>TranslateGemma</h1>
+      </div>
+      <p class="subtitle">Local & cloud translation powered by AI</p>
+    </header>
+
+    <main class="main">
+      <section class="settings-section">
+        <h2>Translation Provider</h2>
+        <p class="section-description">Choose your translation backend — Ollama for local, or any OpenAI-compatible API.</p>
+
+        <div class="form-group">
+          <label for="provider">Provider</label>
+          <select id="provider" name="provider">
+            <option value="ollama">Ollama (Local)</option>
+            <option value="openai">OpenAI Compatible</option>
+          </select>
+          <span class="help-text" id="provider-help">Use a local Ollama server for private, offline translation.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="server-url" id="url-label">Server URL</label>
+          <input
+            type="url"
+            id="ollama-url"
+            name="ollama-url"
+            placeholder="http://localhost:11434"
+            pattern="https?://.+"
+            required
+          >
+          <span class="help-text" id="url-help">The URL where your Ollama server is running. Default: http://localhost:11434</span>
+        </div>
+
+        <div class="form-group hidden" id="api-key-group">
+          <label for="api-key">API Key</label>
+          <input
+            type="password"
+            id="api-key"
+            name="api-key"
+            placeholder="sk-..."
+          >
+          <span class="help-text">Your API key. Leave empty if the server doesn't require authentication.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="model-name">Model Name</label>
+          <input
+            type="text"
+            id="model-name"
+            name="model-name"
+            placeholder="translategemma:4b"
+            required
+          >
+          <span class="help-text" id="model-help">The Ollama model to use for translation. Default: translategemma:4b</span>
+        </div>
+
+        <div class="test-connection-wrapper">
+          <button type="button" id="test-connection" class="btn btn-secondary">
+            <span class="btn-icon">🔌</span>
+            Test Connection
+          </button>
+          <span id="connection-status" class="connection-status"></span>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Keyboard Shortcut</h2>
+        <p class="section-description">The keyboard shortcut for translating selected text.</p>
+
+        <div class="keyboard-shortcut-info">
+          <div class="shortcut-display">
+            <kbd class="key">Alt</kbd>
+            <span class="plus">+</span>
+            <kbd class="key">Shift</kbd>
+            <span class="plus">+</span>
+            <kbd class="key">T</kbd>
+          </div>
+          <p class="shortcut-description">Press this shortcut to translate the currently selected text.</p>
+        </div>
+
+        <div class="shortcut-note">
+          <strong>Note:</strong> You can customize this shortcut by going to
+          <code>chrome://extensions/shortcuts</code> in your browser.
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Usage Instructions</h2>
+        <div class="instructions">
+          <ol>
+            <li>
+              <strong>Start Ollama:</strong> Make sure Ollama is running on your local machine.
+              Run <code>ollama serve</code> in your terminal.
+            </li>
+            <li>
+              <strong>Pull the model:</strong> Ensure you have the translation model:
+              <code>ollama pull translategemma:4b</code>
+            </li>
+            <li>
+              <strong>Select text:</strong> Highlight any text on a webpage that you want to translate.
+            </li>
+            <li>
+              <strong>Translate:</strong> Use one of these methods:
+              <ul>
+                <li>Right-click and select "Translate with TranslateGemma"</li>
+                <li>Press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd></li>
+                <li>Click the TranslateGemma toolbar icon</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="version-info" id="version-info">Loading version...</div>
+      <div class="save-wrapper">
+        <button type="button" id="save-settings" class="btn btn-primary">
+          <span class="btn-icon">💾</span>
+          Save Settings
+        </button>
+        <span id="save-status" class="save-status"></span>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

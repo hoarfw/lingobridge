@@ -1,0 +1,29 @@
+{
+  "name": "translgemma-extension",
+  "version": "1.0.0",
+  "description": "TranslateGemma Chrome Extension - Local translation using Ollama",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "build:skip-tests": "node build.js --skip-tests",
+    "pack": "node build.js --pack",
+    "test": "node --experimental-modules jest.config.cjs",
+    "test:watch": "node --experimental-modules jest.config.cjs --watch",
+    "test:coverage": "node --experimental-modules jest.config.cjs --coverage"
+  },
+  "keywords": [
+    "chrome-extension",
+    "translation",
+    "ollama",
+    "translgemma"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "archiver": "^7.0.0",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
