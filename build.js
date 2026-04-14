@@ -5,7 +5,7 @@ import path from 'path';
 import archiver from 'archiver';
 
 const CONFIG = {
-  name: 'translgemma-extension',
+  name: 'lingobridge-extension',
   version: '1.0.0',
   sourceDir: path.dirname(new URL(import.meta.url).pathname),
   outputDir: null,
@@ -224,7 +224,7 @@ function createPackage() {
 
 async function build() {
   log('\n' + '='.repeat(60));
-  log('🏗 Building TranslateGemma Chrome Extension');
+  log('🏗 Building LingoBridge Chrome Extension');
   log('='.repeat(60));
 
   cleanOutput();

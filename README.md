@@ -1,6 +1,6 @@
-# TranslateGemma Chrome Extension
+# LingoBridge Chrome Extension
 
-A Chrome browser extension that provides real-time translation using Ollama's local translate-gemma model. Users can translate selected text or entire web pages, with translation results displayed alongside original text in a bilingual format. Designed for cost-conscious users who want to avoid external translation API fees while reading foreign language web content and work-related documents.
+A Chrome browser extension branded as LingoBridge, with the Chinese name "灵桥翻译". It provides real-time translation using Ollama's local translate-gemma model. Users can translate selected text or entire web pages, with translation results displayed alongside original text in a bilingual format. Designed for cost-conscious users who want to avoid external translation API fees while reading foreign language web content and work-related documents.
 
 ## Build
 
@@ -46,7 +46,7 @@ curl http://localhost:11434/api/tags
 
 ### Extension Settings
 
-1. Click the TranslateGemma icon in the Chrome toolbar
+1. Click the LingoBridge icon in the Chrome toolbar
 2. Select "Options" or right-click the extension and choose "Options"
 3. Configure your Ollama settings:
    - **Ollama URL** (default: `http://localhost:11434`)
@@ -68,7 +68,7 @@ ollama pull llama3.2
 ### Translate Selected Text
 
 1. Select text on any webpage
-2. Right-click and choose "Translate with TranslateGemma"
+2. Right-click and choose "Translate with LingoBridge"
 3. Or use the keyboard shortcut: `Alt+Shift+T`
 4. Or click the extension toolbar button
 5. Translation will appear below the selected text with a green left border
@@ -155,7 +155,7 @@ npm run test:coverage
 ### Project Structure
 
 ```
-translgemma-extension/
+lingobridge-extension/
 ├── manifest.json          # Chrome extension manifest
 ├── icons/                # Extension icons (16, 32, 48, 128)
 ├── src/                  # Source code

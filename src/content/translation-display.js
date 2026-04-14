@@ -37,7 +37,7 @@ export class TranslationDisplay {
     container.innerHTML = `
       <div class="tg-translation-box">
         <div class="tg-translation-header">
-          <span class="tg-translation-label">Translated by TranslateGemma</span>
+          <span class="tg-translation-label">Translated by LingoBridge 灵桥翻译</span>
           <button class="tg-close-btn" aria-label="Close translation">×</button>
         </div>
         <div class="tg-translation-text">${escapedTranslation}</div>

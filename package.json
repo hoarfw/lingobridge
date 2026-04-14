@@ -1,7 +1,7 @@
 {
-  "name": "translgemma-extension",
+  "name": "lingobridge-extension",
   "version": "1.0.0",
-  "description": "TranslateGemma Chrome Extension - Local translation using Ollama",
+  "description": "LingoBridge Chrome Extension - Local translation using Ollama",
   "type": "module",
   "scripts": {
     "build": "node build.js",
@@ -15,7 +15,7 @@
     "chrome-extension",
     "translation",
     "ollama",
-    "translgemma"
+    "lingobridge"
   ],
   "author": "",
   "license": "MIT",

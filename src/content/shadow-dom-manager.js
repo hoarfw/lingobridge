@@ -20,7 +20,7 @@ export class ShadowDOMManager {
     // Create the host element
     const host = document.createElement('div');
     host.id = hostId;
-    host.className = 'translate-gemma-host';
+    host.className = 'lingo-bridge-host';
     host.setAttribute('data-tg-host', 'true');
 
     // Create shadow root with closed mode for maximum isolation

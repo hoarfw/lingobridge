@@ -13,7 +13,7 @@ export class ContextMenuManager {
       chrome.contextMenus.create(
         {
           id: this.MENU_ID,
-          title: 'Translate with TranslateGemma',
+          title: 'Translate with LingoBridge',
           contexts: ['selection']
         },
         () => {

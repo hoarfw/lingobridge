@@ -1,5 +1,5 @@
 /**
- * Jest configuration for TranslateGemma Chrome Extension
+ * Jest configuration for LingoBridge Chrome Extension
  */
 
 module.exports = {

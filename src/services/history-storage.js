@@ -5,7 +5,7 @@
  * pagination, search, and efficient querying.
  */
 
-const DB_NAME = 'TranslateGemmaHistory';
+const DB_NAME = 'LingoBridgeHistory';
 const DB_VERSION = 1;
 const STORE_NAME = 'translations';
 const META_STORE = 'metadata';

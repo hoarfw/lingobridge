@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "TranslateGemma",
+  "name": "LingoBridge",
   "version": "1.0.0",
   "description": "Translate web content using a free local translation model without exposing your data to external services",
   "permissions": [
@@ -44,7 +44,7 @@
       "16": "icons/icon16.png",
       "32": "icons/icon32.png"
     },
-    "default_title": "Translate with TranslateGemma"
+    "default_title": "Translate with LingoBridge"
   },
   "icons": {
     "16": "icons/icon16.png",

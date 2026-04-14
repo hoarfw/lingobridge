@@ -121,7 +121,7 @@ chrome.runtime.onInstalled.addListener(async (details) => {
 function registerContextMenu() {
   chrome.contextMenus.create({
     id: 'translate-selection',
-    title: 'Translate with TranslateGemma',
+    title: 'Translate with LingoBridge',
     contexts: ['selection']
   }, () => {
     if (chrome.runtime.lastError) console.log('Context menu already exists');

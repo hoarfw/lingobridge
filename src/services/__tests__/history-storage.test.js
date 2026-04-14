@@ -9,7 +9,7 @@ describe('HistoryStorage', () => {
 
   beforeEach(async () => {
     // Clear any existing database
-    const deleteRequest = indexedDB.deleteDatabase('TranslateGemmaHistory');
+    const deleteRequest = indexedDB.deleteDatabase('LingoBridgeHistory');
     await new Promise((resolve, reject) => {
       deleteRequest.onsuccess = resolve;
       deleteRequest.onerror = () => reject(deleteRequest.error);
@@ -29,7 +29,7 @@ describe('HistoryStorage', () => {
   describe('initialization', () => {
     it('should initialize the database', () => {
       expect(storage.db).not.toBeNull();
-      expect(storage.db.name).toBe('TranslateGemmaHistory');
+      expect(storage.db.name).toBe('LingoBridgeHistory');
       expect(storage.db.version).toBe(1);
     });
 
